@@ -1,4 +1,6 @@
-package org.example;
+package org.example.telas;
+
+import org.example.entidades.Cliente;
 
 import java.util.Scanner;
 
