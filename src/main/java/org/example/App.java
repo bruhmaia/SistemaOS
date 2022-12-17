@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.telas.TelaCadastrarOS;
+
 import java.util.Scanner;
 
 public class App {

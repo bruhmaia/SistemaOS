@@ -1,9 +1,11 @@
-package org.example;
+package org.example.telas;
+
+import org.example.entidades.Cliente;
 
 import java.util.Scanner;
 
 public class TelaCadastroCliente {
-    public Cliente DadosCliente() {
+    public Cliente dadosCliente() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Informe o seu nome");
         String nome = scanner.next();
