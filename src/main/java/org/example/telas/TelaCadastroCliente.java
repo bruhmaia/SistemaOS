@@ -1,6 +1,7 @@
 package org.example.telas;
 
 import org.example.entidades.Cliente;
+import org.example.persistencia.Loja;
 
 import java.util.Scanner;
 
@@ -17,7 +18,7 @@ public class TelaCadastroCliente {
         System.out.println("Informe o seu telefone");
         String telefone = scanner.next();
         Cliente cliente = new Cliente(nome, sobrenome, CPF, endereco, telefone);
-        loja.setCliente(cliente);
+        loja.adicionar(cliente);
         System.out.println("Cliente cadastrado com sucesso!");
     }
 }
