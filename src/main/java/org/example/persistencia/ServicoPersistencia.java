@@ -4,7 +4,6 @@ import org.example.entidades.Servico;
 
 import java.util.ArrayList;
 import java.util.Optional;
-import java.util.stream.Stream;
 
 public class ServicoPersistencia {
     private static ArrayList<Servico> servicos = new ArrayList<Servico>();
