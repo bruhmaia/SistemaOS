@@ -1,7 +1,5 @@
 package org.example.entidades;
 
-import java.time.LocalDateTime;
-
 public class PrestadorDaOS {
     Prestador prestadorAtual;
     Prestador prestadorAntigo;
@@ -20,6 +18,7 @@ public class PrestadorDaOS {
     }
 
     public void setPrestadorAntigo(Prestador prestadorAntigo) {
+
         this.prestadorAntigo = prestadorAntigo;
     }
 
@@ -47,6 +46,4 @@ public class PrestadorDaOS {
         Ordemdeservico = ordemdeservico;
     }
 
-    public void setPrestadorAtual() {
-    }
 }

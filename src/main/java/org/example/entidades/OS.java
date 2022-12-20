@@ -1,56 +1,48 @@
 package org.example.entidades;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Optional;
 import java.util.UUID;
 
     public class OS {
+        ArrayList<PrestadorDaOS> prestadores;
         String CodigoOS;
-        Prestador prestadorOS;
-        Cliente clienteOS;
-        Servico servicoOS;
+        Cliente cliente;
+        Servico servico;
         LocalDateTime DataSolicitacao;
         String DataConclusao;
         String statusOS;
 
-        private OS(String CodigoOS, Prestador prestadorOS, Cliente clienteOS, Servico servicoOS, LocalDateTime DataSolicitacao, String statusOS) {
+        public OS(String CodigoOS, Cliente cliente, Servico servico, LocalDateTime DataSolicitacao, String statusOS) {
             this.CodigoOS = UUID.randomUUID().toString();
             DataSolicitacao = LocalDateTime.now();
-            this.clienteOS = clienteOS;
-            this.prestadorOS = prestadorOS;
-            this.servicoOS = servicoOS;
+            this.cliente = cliente;
+            this.servico = servico;
             this.statusOS = statusOS;
+        }
+
+        public OS(Optional<PrestadorDaOS> first) {
         }
 
         public String getStatusOS(){
             return statusOS;
         }
 
+        public void setServico(Servico servico) {
+            this.servico = servico;
+        }
+
         public void setStatusOS(String statusOS) {
             this.statusOS = statusOS;
         }
 
-
-        private Cliente getClienteOS(){
-            return clienteOS;
-            //return new Cliente(clienteOS.getCodigoCliente(), clienteOS.getNome()); - deu erro dizendo que ta sem construtor
+        public Cliente getCliente() {
+            return cliente;
         }
 
-        public void setClienteOS(Cliente clienteOS) {
-            this.clienteOS = clienteOS;
-        }
-
-        private Prestador getPrestadorOS() {
-            return prestadorOS;
-            //return new Prestador(prestadorOS.getNome(), prestadorOS.getNumeroInscricao())
-        }
-
-        public void setPrestadorOS(Prestador prestadorOS) {
-            this.prestadorOS = prestadorOS;
-        }
-
-
-        private Servico getServicoOS(){
-            return servicoOS;
+        public void setCliente(Cliente cliente) {
+            this.cliente = cliente;
         }
 
         public String getCodigoOS(){
@@ -59,6 +51,14 @@ import java.util.UUID;
 
         private void setCodigoOS (String CodigoOS) {
             this.CodigoOS = CodigoOS;
+        }
+
+        public ArrayList<PrestadorDaOS> getPrestadores() {
+            return prestadores;
+        }
+
+        public void setPrestadores(ArrayList<PrestadorDaOS> prestadores) {
+            this.prestadores = prestadores;
         }
 
         public LocalDateTime DataSolicitacao(){
