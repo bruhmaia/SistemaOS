@@ -1,6 +1,7 @@
 package org.example.telas;
 
 import org.example.entidades.Cliente;
+import org.example.persistencia.Loja;
 
 import java.util.Scanner;
 

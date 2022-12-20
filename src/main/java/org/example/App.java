@@ -1,17 +1,39 @@
 package org.example;
 
+<<<<<<< HEAD
+import org.example.entidades.Servico;
+import org.example.exceptions.ServicoNaoEncontradoException;
+import org.example.telas.TelaBuscarServico;
+import org.example.telas.TelaCadastrarOS;
+import org.example.telas.TelaCadastrarServico;
+import org.example.telas.TelaServico;
+=======
 import org.example.persistencia.Loja;
 import org.example.telas.TelaCadastrarOS;
 import org.example.telas.TelaCadastroCliente;
+>>>>>>> 7d612b8d54f04c682dcdd00babbaf327555fc84f
 
+import java.io.FileNotFoundException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ServicoNaoEncontradoException {
+        // Exemplo de Utilização da implementação de Serviço - Misael
+        /*
+        Scanner scanner = new Scanner(System.in);
+        for(int i = 0; i < 5; i++){
+            TelaServico telaCadastroServico = new TelaCadastrarServico();
+            telaCadastroServico.executar(scanner);
+
+            TelaServico telaBuscarServico = new TelaBuscarServico();
+            telaBuscarServico.executar(scanner);
+        } */
 
         System.out.println("Bem vindo ao sistema de abertura de ordem de serviço");
-        Scanner scanner = new Scanner(System.in);
         int opcao = 0;
+        Scanner scanner = new Scanner(System.in);
         do {
             System.out.println("escolha a opção que você deseja");
             System.out.println(" (1) - Cadastrar nova Ordem de serviço \n (2) - Buscar Ordem de Serviço \n (3) - Cadastrar um novo Cliente \n (4) - Listar Clientes \n (0) - Sair" );
@@ -39,5 +61,6 @@ public class App {
             }
 
         } while (opcao > 0);
+
     }
 }
