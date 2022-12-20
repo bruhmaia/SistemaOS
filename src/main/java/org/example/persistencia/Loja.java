@@ -1,6 +1,8 @@
 package org.example.persistencia;
 
 import org.example.entidades.Cliente;
+import org.example.entidades.OS;
+import org.example.entidades.Prestador;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +29,33 @@ public class Loja {
         }
     }
 
+    private static ArrayList<OS> ordemdeservico = new ArrayList<>();
+
+    public static void adicionarOS(OS os) {
+        ordemdeservico.add(os);
+    }
+
+    public static void exibeOS() {
+        for (OS os : ordemdeservico) {
+            System.out.println("Status " + os.getStatusOS());
+            System.out.println("Codigo " + os.getCodigoOS());
+            System.out.println("Cliente" + os.getCliente().getNome());
+            System.out.println("Prestadores" + os.getPrestadores());
+        }
+    }
+
+    public void editarPrestador(OS os) {
+        if (os == null) {
+            boolean encontrou = false;
+        }
+        for (OS os : ordemdeservico) {
+            if (os.getCodigoOS() == ordemdeservico.get())
+
+                encontrou = true;
+                break;
+            }
+        }
+
+        }
 
 
-
-}

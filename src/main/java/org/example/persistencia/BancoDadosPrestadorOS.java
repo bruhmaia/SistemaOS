@@ -1,12 +1,11 @@
 package org.example.persistencia;
 
 import org.example.entidades.OS;
-import org.example.entidades.Prestador;
 import org.example.entidades.PrestadorDaOS;
 
 import java.util.ArrayList;
 
-public class PrestadorOSPersistencia {
+public class BancoDadosPrestadorOS {
     private static ArrayList<PrestadorDaOS> prestadoresOS = new ArrayList<>();
 
     public static void adicionarPrestadoresOS(PrestadorDaOS prestadorDaOS) {
