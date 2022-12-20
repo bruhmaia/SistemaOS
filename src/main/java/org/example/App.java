@@ -18,7 +18,7 @@ public class App {
             opcao = scanner.nextInt();
             switch (opcao) {
                 case 1:
-                    TelaCadastrarOS.cadastrarOS(scanner);
+                    TelaCadastrarOS.cadastrarOS(scanner, new Loja());
                     // Cadastrar nova ordem de serviço
                     break;
 
