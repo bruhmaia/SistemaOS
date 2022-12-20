@@ -46,4 +46,6 @@ public class PrestadorDaOS {
         Ordemdeservico = ordemdeservico;
     }
 
+    public void setPrestadorAtual() {
+    }
 }

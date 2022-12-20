@@ -1,5 +1,8 @@
 package org.example.telas;
 
+import org.example.entidades.OS;
+import org.example.persistencia.Loja;
+
 import java.util.Scanner;
 
 public class TelaBuscarOS {
@@ -9,9 +12,10 @@ public class TelaBuscarOS {
         String nome = scanner.next();
     }
 
-    public static void buscarCodigoOS(Scanner scanner) {
+    public static OS buscarCodigoOS(Scanner scanner) {
         System.out.println("Digite o código da ordem de serviço: ");
-        String codOS = scanner.next();
+        Loja loja = new Loja();
+        return Loja.procurarPorCodigo(scanner.next()).orElseThrow(()-> new RuntimeException("Ordem de Serviço não encontrada"));
     }
 
 }

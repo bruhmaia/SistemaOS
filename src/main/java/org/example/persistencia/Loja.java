@@ -4,11 +4,10 @@ import org.example.entidades.Cliente;
 import org.example.entidades.OS;
 import org.example.entidades.Prestador;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Loja {
+
     private static ArrayList<Cliente> clientes = new ArrayList<>();
 
     public static void adicionar(Cliente cliente) {
@@ -31,8 +30,7 @@ public class Loja {
 
     private static ArrayList<OS> ordemdeservico = new ArrayList<>();
 
-    public static void adicionarOS(OS os) {
-        ordemdeservico.add(os);
+    public static void adicionarOS(OS os) {ordemdeservico.add(os);
     }
 
     public static void exibeOS() {
@@ -44,18 +42,33 @@ public class Loja {
         }
     }
 
-    public void editarPrestador(OS os) {
-        if (os == null) {
-            boolean encontrou = false;
+    public static Optional<OS> procurarPorCodigo(String codOS){
+        if(Objects.isNull(ordemdeservico)){
+            throw new RuntimeException("Não há ordem de serviço cadastradas");
         }
         for (OS os : ordemdeservico) {
-            if (os.getCodigoOS() == ordemdeservico.get())
+            if(os.getCodigoOS().equals(codOS)){
+                return Optional.of(os);
+            }
+        }
+        return Optional.empty();
+    }
 
-                encontrou = true;
-                break;
+    public static void editarPrestador(OS os, Scanner scanner) {
+            System.out.println("Digite o Codigo da OS");
+            String CodigodaOS = scanner.next();
+            for (OS c : ordemdeservico) {
+                if (CodigodaOS.equals(os.getCodigoOS())) {
+                    System.out.println("Digite o nome do atual prestador");
+                    String atualPrestador = scanner.next();
+                    System.out.println("Digite o nome do novo prestador");
+                    String novoPrestador = scanner.next();
+                    ordemdeservico.stream().filter(os1-> c.getPrestadores().equals(atualPrestador)).findFirst().ifPresent(o->o.setPrestadores(novoPrestador));
+                    }
+                }
             }
         }
 
-        }
+
 
 
