@@ -29,4 +29,9 @@ public class TelaCadastrarServico implements TelaServico {
         System.out.println("Serviço Cadastrado. Dados do serviço: \n | Código: " + SEQUENCIAL_CODIGO_SERVICO + " |\n | Tipo Serviço: " + tipoServico.getLabel() + " |\n | Descrição: " + descricao + " | \n");
         SEQUENCIAL_CODIGO_SERVICO++;
     }
+
+    @Override
+    public Servico executarBusca(Scanner scanner) throws ServicoNaoEncontradoException {
+        return null;
+    }
 }
