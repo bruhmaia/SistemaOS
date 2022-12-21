@@ -7,7 +7,7 @@ import java.util.UUID;
 
     public class OS {
         ArrayList<PrestadorDaOS> prestadores;
-        String CodigoOS;
+        static String CodigoOS;
         Cliente cliente;
         Servico servico;
         LocalDateTime DataSolicitacao;
@@ -68,4 +68,7 @@ import java.util.UUID;
         public void setDataSolicitacao () {
             this.DataSolicitacao = DataSolicitacao;
         }
-}
+
+        public void setPrestadores(String novoPrestador) {
+        }
+    }
