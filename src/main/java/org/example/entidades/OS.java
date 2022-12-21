@@ -29,8 +29,12 @@ import java.util.UUID;
             return statusOS;
         }
 
-        public void setServico(Servico servico) {
+        public void setServico(String servico) {
             this.servico = servico;
+        }
+
+        public Servico getServico() {
+            return servico;
         }
 
         public void setStatusOS(String statusOS) {
