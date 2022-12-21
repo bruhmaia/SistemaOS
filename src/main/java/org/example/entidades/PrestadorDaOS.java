@@ -1,33 +1,22 @@
 package org.example.entidades;
 
+import java.util.ArrayList;
+
 public class PrestadorDaOS {
-    Prestador prestadorAtual;
-    Prestador prestadorAntigo;
+    ArrayList<Prestador> prestadoresOS;
     String Descricao;
-    OS Ordemdeservico;
+    String CodOrdemdeservico;
 
-    private PrestadorDaOS(Prestador prestadorAtual, Prestador prestadorAntigo, String Descricao, OS Ordemdeservico){
+    PrestadorDaOS(String Descricao, String CodOrdemdeservico){
         this.Descricao=Descricao;
-        this.prestadorAtual=prestadorAtual;
-        this.prestadorAntigo=prestadorAntigo;
-        this.Ordemdeservico=Ordemdeservico;
+        this.CodOrdemdeservico=CodOrdemdeservico;
+        this.prestadoresOS=new ArrayList<>();
     }
 
-    public Prestador getPrestadorAntigo() {
-        return prestadorAntigo;
-    }
+    public void adicionarPrestador(Prestador prestador) {this.prestadoresOS.add(prestador);};
 
-    public void setPrestadorAntigo(Prestador prestadorAntigo) {
-
-        this.prestadorAntigo = prestadorAntigo;
-    }
-
-    public Prestador getPrestadorAtual() {
-        return prestadorAtual;
-    }
-
-    public void setPrestadorAtual(Prestador prestadorAtual) {
-        this.prestadorAtual = prestadorAtual;
+    public ArrayList<Prestador> getPrestadoresOS() {
+        return prestadoresOS;
     }
 
     public String getDescricao() {

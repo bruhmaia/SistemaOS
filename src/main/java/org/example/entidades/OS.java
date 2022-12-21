@@ -20,9 +20,7 @@ import java.util.UUID;
             this.cliente = cliente;
             this.servico = servico;
             this.statusOS = statusOS;
-        }
-
-        public OS(Optional<PrestadorDaOS> first) {
+            this.prestadores = new ArrayList<PrestadorDaOS>();
         }
 
         public String getStatusOS(){
@@ -71,4 +69,5 @@ import java.util.UUID;
 
         public void setPrestadores(String novoPrestador) {
         }
+        public void adicionarPrestadorOS(Prestador prestador) {this.prestadores;);}
     }
